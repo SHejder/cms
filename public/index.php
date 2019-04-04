@@ -10,5 +10,5 @@ require_once dirname(__DIR__) . '/config/init.php';
 require_once LIBS . '/functions.php';
 require_once CONFIG . '/routs.php';
 
-new \ishop\App();
+new ishop\App();
 

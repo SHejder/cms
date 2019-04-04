@@ -55,3 +55,12 @@
 [2018-12-30 08:05:09] Текст ошибки:
         Метод app\controllers\MainController::indexAction не найдена. | Файл: H:\watches.my\vendor\ishop\core\Router.php | Строка: 48
 =====================
+[2019-04-04 08:04:41] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 57
+=====================
+[2019-04-04 08:04:44] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 57
+=====================
+[2019-04-04 08:04:44] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 57
+=====================
