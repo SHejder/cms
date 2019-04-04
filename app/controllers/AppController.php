@@ -16,9 +16,9 @@ class AppController extends Controller
 {
     /**
      * AppController constructor.
-     * @param string $route
+     * @param array $route
      */
-    public function __construct(string $route)
+    public function __construct(array $route)
     {
         parent::__construct($route);
         new AppModel();
