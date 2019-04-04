@@ -10,8 +10,11 @@ namespace ishop;
 
 
 class ErrorHandler{
-
-    public function __construct(){
+    /**
+     * ErrorHandler constructor.
+     */
+    public function __construct()
+    {
 
         if(DEBUG){
 
@@ -26,13 +29,23 @@ class ErrorHandler{
 
     }
 
-    public function exceptionHandler($e){
+    /**
+     * @param \Exception $e
+     */
+    public function exceptionHandler(\Exception $e):void
+    {
 
         $this->logErrors($e->getMessage(), $e->getFile(), $e->getLine());
         $this->displayError('Исключение',$e->getMessage(), $e->getFile(), $e->getLine(), $e->getCode());
     }
 
-    protected function logErrors($messege = '', $file = '', $line = ''){
+    /**
+     * @param string $messege
+     * @param string $file
+     * @param string $line
+     */
+    protected function logErrors(string $messege = '', string $file = '', string $line = ''):void
+    {
 
         error_log("[". date('Y-m-d H:i:s') . "] Текст ошибки:
         {$messege} | Файл: {$file} | Строка: {$line}\n=====================\n",
@@ -40,7 +53,15 @@ class ErrorHandler{
 
     }
 
-    protected function displayError($errno, $errstr, $errfile, $errline, $responce = 404){
+    /**
+     * @param string $errno
+     * @param string $errstr
+     * @param string $errfile
+     * @param string $errline
+     * @param int $responce
+     */
+    protected function displayError(string $errno, string $errstr, string $errfile, string $errline, int $responce = 404):void
+    {
 
         http_response_code($responce);
         if ($responce == 404 && !DEBUG){

@@ -9,17 +9,28 @@
 namespace ishop;
 
 
-class Registry {
+class Registry
+{
 
     use TSingletone;
 
     protected static $properties = [];
 
-    public function setProperty($name, $value) {
+    /**
+     * @param string $name
+     * @param string $value
+     */
+    public function setProperty(string $name, string $value) :void
+    {
         self::$properties[$name] = $value;
     }
 
-    public function getProperty($name){
+    /**
+     * @param string $name
+     * @return string|null
+     */
+    public function getProperty(string $name):mixed
+    {
         if (isset(self::$properties[$name])){
             return self::$properties[$name];
         }
@@ -27,7 +38,11 @@ class Registry {
         return null;
     }
 
-    public function getProperties(){
+    /**
+     * @return array
+     */
+    public function getProperties():array
+    {
         return self::$properties;
     }
 

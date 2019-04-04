@@ -14,7 +14,11 @@ use ishop\base\Controller;
 
 class AppController extends Controller
 {
-    public function __construct($route)
+    /**
+     * AppController constructor.
+     * @param string $route
+     */
+    public function __construct(string $route)
     {
         parent::__construct($route);
         new AppModel();

@@ -13,7 +13,11 @@ trait TSingletone {
 
     private static $instance;
 
-    public static function instance () {
+    /**
+     * @return object
+     */
+    public static function instance (): object
+    {
         if(self::$instance === null){
             self::$instance = new self;
         }

@@ -10,6 +10,10 @@ class Db
 {
     use TSingletone;
 
+    /**
+     * Db constructor.
+     * @throws \Exception
+     */
     protected function __construct()
     {
         $db = require_once CONFIG . '/db.php';

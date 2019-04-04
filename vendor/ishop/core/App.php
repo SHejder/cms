@@ -9,11 +9,17 @@
 namespace ishop;
 
 
-class App {
+class App
+{
 
     public static $app;
 
-    public function __construct()  {
+    /**
+     * App constructor.
+     * @throws \Exception
+     */
+    public function __construct()
+    {
         $query = trim($_SERVER['QUERY_STRING'],'/');
         session_start();
 
@@ -24,7 +30,10 @@ class App {
         Router::dispatch($query);
 
     }
-    protected function getParams(){
+
+
+    protected function getParams():void
+    {
         $params = require_once CONFIG . '/params.php';
         if (!empty($params)){
             foreach ($params as $k => $v){

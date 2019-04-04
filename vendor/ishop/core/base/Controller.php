@@ -20,7 +20,12 @@ abstract class Controller{
     public $data = [];
     public $meta = [];
 
-    public function __construct($route){
+    /**
+     * Controller constructor.
+     * @param array $route
+     */
+    public function __construct(array $route)
+    {
         $this->route = $route;
         $this->controller = $route['controller'];
         $this->view = $route['action'];
@@ -28,16 +33,30 @@ abstract class Controller{
         $this->model = $route['controller'];
     }
 
-    public function getView(){
+    /**
+     * @throws \Exception
+     */
+    public function getView():void
+    {
+
         $viewOdject = new View($this->route, $this->layout, $this->view, $this->meta);
         $viewOdject->render($this->data);
     }
 
-    public function set($data){
+    /**
+     * @param array $data
+     */
+    public function set(array $data):void
+    {
         $this->data = $data;
     }
 
-    public function setMeta($title = '', $desc = ''){
+    /**
+     * @param string $title
+     * @param string $desc
+     */
+    public function setMeta(string $title = '', string $desc = ''):void
+    {
         $this->meta['title'] = $title;
         $this->meta['desc'] = $desc;
 

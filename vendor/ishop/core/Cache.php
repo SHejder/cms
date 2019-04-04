@@ -9,7 +9,13 @@ class Cache
 
     use TSingletone;
 
-    public function set($key, $data, $time = 3600)
+    /**
+     * @param string $key
+     * @param array $data
+     * @param int $time
+     * @return bool
+     */
+    public function set(string $key, array $data, int $time = 3600):bool
     {
         if($time)
         {
@@ -24,7 +30,11 @@ class Cache
         return false;
     }
 
-    public function get($key)
+    /**
+     * @param string $key
+     * @return array|bool
+     */
+    public function get(string $key):mixed
     {
         $file = CACHE.'/'.md5($key).'txt';
         if(file_exists($file))
@@ -39,7 +49,10 @@ class Cache
         return false;
     }
 
-    public function delete($key)
+    /**
+     * @param string $key
+     */
+    public function delete(string $key):void
     {
         $file = CACHE.'/'.md5($key).'txt';
         if(file_exists($file))

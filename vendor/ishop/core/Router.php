@@ -12,39 +12,54 @@ namespace ishop;
 use http\Url;
 use mysql_xdevapi\Exception;
 
-class Router{
+class Router
+{
 
     protected static $routes = [];
     protected static $route = [];
 
-    public static function add($regexp, $route = []){
+    /**
+     * @param string $regexp
+     * @param array $route
+     */
+    public static function add(string $regexp, array $route = []): void
+    {
 
         self::$routes[$regexp] = $route;
 
     }
 
-    public static function getRoutes(){
+    /**
+     * @return array
+     */
+    public static function getRoutes(): array
+    {
 
         return self::$routes;
 
     }
 
 
-
-    public static function dispatch ($url) {
+    /**
+     * @param string $url
+     * @throws \Exception
+     */
+    public static function dispatch(string $url)
+    {
         $url = self::removeQueryString($url);
-        if (self::matchRoute($url)) {
+        if (self::matchRoute($url))
+        {
             $controller = 'app\controllers\\' . self::$route['prefix'] . self::$route['controller'] . 'Controller';
-            if(class_exists($controller)){
+            if (class_exists($controller)) {
                 $controllerObject = new $controller(self::$route);
-                $action = self::lowerCamelCase(self::$route['action']).'Action';
-                if(method_exists($controllerObject, $action)){
-                    $controllerObject -> $action();
-                    $controllerObject -> getView();
-                }else{
+                $action = self::lowerCamelCase(self::$route['action']) . 'Action';
+                if (method_exists($controllerObject, $action)) {
+                    $controllerObject->$action();
+                    $controllerObject->getView();
+                } else {
                     throw new \Exception("Метод $controller::$action не найдена.", 404);
                 }
-            }   else {
+            } else {
 
                 throw new \Exception("Контроллер $controller не найдена.", 404);
             }
@@ -55,26 +70,34 @@ class Router{
 
     }
 
-    public  static function matchRoute ($url) {
+    /**
+     * @param string $url
+     * @return bool
+     *
+     */
+    public static function matchRoute(string $url): bool
+    {
 
         foreach (self::$routes as $pattern => $route) {
             if (preg_match("#{$pattern}#", $url, $matches)) {
-                foreach ($matches as $k => $v){
-                    if(is_string($k)){
-                        $route[$k] = $v;
-                    }
+                foreach ($matches as $k => $v)
+                {
+                    $route[$k] = $v;
                 }
-                if(empty($route['action'])){
+                if (empty($route['action']))
+                {
                     $route['action'] = 'index';
-
                 }
-                if(!isset($route['prefix'])){
+                if (!isset($route['prefix']))
+                {
                     $route['prefix'] = '';
-                }else{
+                }
+                else
+                {
                     $route['prefix'] .= '\\';
                 }
-                $route['controller']=self::upperCamelCase($route['controller']);
-                self::$route=$route;
+                $route['controller'] = self::upperCamelCase($route['controller']);
+                self::$route = $route;
 
                 return true;
             }
@@ -83,26 +106,37 @@ class Router{
         return false;
     }
 
-    protected static function upperCamelCase($name){
+    /**
+     * @param string $name
+     * @return string
+     */
+    protected static function upperCamelCase(string $name): string
+    {
         return str_replace(' ', '', ucwords(str_replace('-', ' ', $name)));
     }
 
-    protected static function lowerCamelCase($name){
+    /**
+     * @param string $name
+     * @return string
+     */
+    protected static function lowerCamelCase(string $name): string
+    {
         return lcfirst(self::upperCamelCase($name));
 
     }
 
-    protected static function removeQueryString($url)
+    /**
+     * @param string $url
+     * @return string
+     */
+    protected static function removeQueryString(string $url): string
     {
-        if($url)
-        {
-            $params = explode('&',$url,2);
+        if ($url) {
+            $params = explode('&', $url, 2);
 
-            if(!strpos($params[0],'='))
-            {
-                return rtrim($params[0],'/');
-            }else
-            {
+            if (!strpos($params[0], '=')) {
+                return rtrim($params[0], '/');
+            } else {
                 return "";
             }
         }
