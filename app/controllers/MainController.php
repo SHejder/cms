@@ -10,11 +10,18 @@ namespace app\controllers;
 
 
 
+use ishop\Cache;
+use RedBeanPHP\R;
+
 class MainController extends AppController {
 
 
     public function indexAction(){
+
+        $posts = R::findAll('test');
         $this->setMeta('test', 'test_desc');
-        $this->set(['name'=>'Иван']);
+        $cache = Cache::instance();
+        $cache->set('test',$posts);
+        $this->set(compact('posts'));
     }
 }
