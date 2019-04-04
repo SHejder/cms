@@ -12,8 +12,9 @@ namespace app\controllers;
 
 class MainController extends AppController {
 
-    public $layout = 'test';
 
     public function indexAction(){
+        $this->setMeta('test', 'test_desc');
+        $this->set(['name'=>'Иван']);
     }
 }

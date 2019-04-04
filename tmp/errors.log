@@ -64,3 +64,102 @@
 [2019-04-04 08:04:44] Текст ошибки:
         Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 57
 =====================
+[2019-04-04 09:16:43] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 09:18:12] Текст ошибки:
+        Контроллер app\controllers\PagesController не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 48
+=====================
+[2019-04-04 09:18:26] Текст ошибки:
+        Метод app\controllers\PageController::indexAction не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 44
+=====================
+[2019-04-04 09:23:54] Текст ошибки:
+        Метод app\controllers\PageController::indexAction не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 44
+=====================
+[2019-04-04 09:41:42] Текст ошибки:
+        Метод app\controllers\PageController::indexAction не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 44
+=====================
+[2019-04-04 09:42:33] Текст ошибки:
+        Call to undefined method app\controllers\PageController::getView() | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 42
+=====================
+[2019-04-04 09:44:00] Текст ошибки:
+        Не найден вид C:\Users\QA\PhpstormProjects\cms/app/views/Page/view.php | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\base\View.php | Строка: 45
+=====================
+[2019-04-04 09:44:18] Текст ошибки:
+        Не найден вид C:\Users\QA\PhpstormProjects\cms/app/views/Page/view.php | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\base\View.php | Строка: 45
+=====================
+[2019-04-04 09:51:30] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 09:51:30] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 09:51:30] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 09:51:30] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 09:51:31] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 09:51:31] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 09:51:31] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 09:51:31] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 09:51:31] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 09:51:32] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 09:51:32] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 09:51:32] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 09:51:32] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 09:51:32] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 09:51:33] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 09:51:33] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 09:51:33] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 09:51:46] Текст ошибки:
+        Контроллер app\controllers\AsfdController не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 48
+=====================
+[2019-04-04 10:50:52] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 10:52:18] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 10:57:21] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 10:58:31] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 11:02:28] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 11:03:41] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 52
+=====================
+[2019-04-04 11:29:07] Текст ошибки:
+        Страница не найдена. | Файл: C:\Users\QA\PhpstormProjects\cms\vendor\ishop\core\Router.php | Строка: 53
+=====================
